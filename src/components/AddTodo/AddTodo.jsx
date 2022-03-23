@@ -10,12 +10,18 @@ const AddTodo = () => {
       status: false,
     };
     addTask(newObj);
+    setInpValue("");
   }
 
   return (
     <div>
-      <input onChange={(e) => setInpValue(e.target.value)} type="text" />
+      <input
+        value={inpValue}
+        onChange={(e) => setInpValue(e.target.value)}
+        type="text"
+      />
       <button onClick={handleClick}>Add</button>
+      <button>Edit</button>
     </div>
   );
 };
